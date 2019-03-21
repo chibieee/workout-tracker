@@ -3,7 +3,15 @@
   padding: 0;
   box-sizing: content-box;
 }
-
-html, body {
+html, body, #root, #main__container {
   height: 100%;
+}
+body {
+  font-size: 18px;
+}
+#main__container {
+  padding: 10%;
+}
+select {
+  font-size: 1.25em;
 }

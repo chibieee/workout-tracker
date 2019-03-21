@@ -2,16 +2,10 @@ import React, { Component } from 'react'
 
 export default class View extends Component {
     render() {
-        return (
-            <div>
-                <div className="day-item">{this.props.view}</div>
-                <div className="day-item"></div>
-                <div className="day-item"></div>
-                <div className="day-item"></div>
-                <div className="day-item"></div>
-                <div className="day-item"></div>
-                <div className="day-item"></div>
-            </div>
-        )
+        var items = [];
+        for (let i = 0; i < this.props.view; i++) {
+            items.push(<div className="day-item">hello {i}</div>)
+        }
+        return items
     }
 }
