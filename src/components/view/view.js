@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 
+import DayView from './dayView';
 import './view.css';
 
 export default class View extends Component {
@@ -11,9 +12,7 @@ export default class View extends Component {
         let dayItems = [];
         for(let i = 0; i < this.props.view; i++) {
             dayItems.push(
-                <div key={i}>
-                    I am a day!
-                </div>
+                <DayView key={i} {...this.props.workouts[i]}/>
             )
         }
         return dayItems;
