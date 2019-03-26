@@ -1,16 +1,19 @@
-import React, { Component } from 'react';
+import { bindActionCreators } from 'redux';
+import { connect } from 'react-redux';
+import * as actionCreators from './actions/actionCreators';
 import Main from './components/main';
 
-
-
-import './App.css';
-
-class App extends Component {
-  render() {
-    return (
-      <Main />
-    );
+function mapStateToProps(state) {
+  return {
+    view: state.view,
+    workouts: state.workouts
   }
 }
+
+function mapDispatchToProps(dispatch) {
+  return bindActionCreators(actionCreators, dispatch);
+}
+
+const App = connect(mapStateToProps, mapDispatchToProps)(Main);
 
 export default App;
