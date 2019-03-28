@@ -3,9 +3,23 @@
     flex-wrap: wrap;
     padding: 10% 0;
 }
-.day-item {
-    /* width: calc((100% / 7) - 2%); */
-    width: 48%;
+.day__container.d1 .day-item {
+    width: 100%;
+}
+.day__container.d2 .day-item {
+    width: 46%;
     margin-right: 2%;
     margin-bottom: 5%;
+}
+.day__container.d3 .day-item {
+    width: 30.33%;
+    margin-right: 3%;
+}
+.day__container.d4 .day-item {
+    width: 22%;
+    margin-right: 3%;
+}
+.day__container.d5 .day-item {
+    width: 17%;
+    margin-right: 3%;
 }

@@ -1,14 +1,16 @@
 import { combineReducers } from 'redux';
  
 function workouts(state = [], action) {
-    console.log('Change Workouts');
-    console.log(state, action);
     return state;
 }
 
 function view(state = [], action) {
-    console.log(state, action);
-    return state;
+    switch(action.type) {
+        case 'CHANGE_CYCLE_VIEW':
+        return action.num
+        default:
+        return state;
+    }
 }
  
 const rootReducer = combineReducers({

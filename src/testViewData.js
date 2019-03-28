@@ -1,2 +1,2 @@
-const testViewData = 2;
+const testViewData = 1;
 export default testViewData;
